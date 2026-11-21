@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Año Bisiesto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <span class="badge">Calendario · Regla 4 / 100 / 400</span>
+      <h1>Año Bisiesto</h1>
+      <p>Escribe un año o elige uno de prueba para saber si febrero tiene 29 días.</p>
+    </header>
+
+    <section class="input-section">
+      <label for="year-input" class="label">Introduce un año</label>
+      <div class="input-row">
+        <input
+          type="number"
+          id="year-input"
+          value="2024"
+          min="1"
+          max="9999"
+          placeholder="Ej. 2024"
+        />
+        <button type="button" id="check-btn" class="check-btn">Comprobar</button>
+      </div>
+
+      <div class="quick-presets">
+        <button type="button" class="preset-btn" data-year="2024">2024</button>
+        <button type="button" class="preset-btn" data-year="2000">2000</button>
+        <button type="button" class="preset-btn" data-year="1900">1900</button>
+        <button type="button" class="preset-btn" data-year="1901">1901</button>
+      </div>
+    </section>
+
+    <section id="result-card" class="result-card is-leap" aria-live="polite">
+      <span id="result-tag" class="result-tag">Bisiesto · 366 días</span>
+      <p id="result-text" class="result-text">2024 is a leap year.</p>
+      <p id="rule-explanation" class="rule-explanation">
+        Es divisible por 4 y no es divisible por 100.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
